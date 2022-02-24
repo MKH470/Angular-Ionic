@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Opdrachten</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <h1 class="ion-text-center">Buttons</h1>
+  <ion-button color="warning"> button</ion-button>
+  <ion-button expand="block" color="secondary"> Block</ion-button>
+  <ion-button fill="outline" (click)="alertButton()">
+    <ion-icon name="alarm-outline" slot="end"></ion-icon>
+
+    outline
+  </ion-button>
+  <ion-button fill="clear" id="clear" (click)="clear()"> Clear</ion-button>
+  <hr>
+  <h1 class="ion-text-center ion-padding-top">Cards</h1>
+  <ion-card>
+    <img src="../../assets/imges/img1.jpeg">
+    <ion-card-header>
+      <ion-card-subtitle>Nederland</ion-card-subtitle>
+      <ion-card-title>Mooie Vlinder</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur officia maxime consectetur reiciendis odit modi,
+      soluta, beatae itaque, reprehenderit numquam delectus quod aperiam in. Dolorem nam veniam doloribus error
+      veritatis.
+    </ion-card-content>
+  </ion-card>
+</ion-content>

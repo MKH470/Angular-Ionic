@@ -6,7 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  m = 0;
   constructor() {}
-
+  alertButton() {
+    alert('Hi I Am Here');
+  }
+  clear() {
+    const newm = this.m++;
+    console.log(newm);
+  }
 }

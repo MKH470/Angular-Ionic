@@ -18,4 +18,10 @@ export class OpdrachtenPage implements OnInit {
     const newm = this.m++;
     console.log(newm);
   }
+  fapClick() {
+    console.log('FAP is clicked');
+  }
+  share(n: string) {
+    console.log('Supscriped on ' + n);
+  }
 }

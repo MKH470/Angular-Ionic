@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/opdrachten"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Button</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button color="warning"> button</ion-button>
+  <ion-button expand="block" color="secondary"> Block</ion-button>
+  <ion-button fill="outline" (click)="alertButton()">
+    <ion-icon name="alarm-outline" slot="end"></ion-icon>
+
+    outline
+  </ion-button>
+  <ion-button fill="clear" id="clear" (click)="clear()"> Clear</ion-button>
+</ion-content>

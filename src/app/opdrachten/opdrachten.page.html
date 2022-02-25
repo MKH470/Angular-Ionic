@@ -1,75 +1,24 @@
 <ion-header>
+
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text=""></ion-back-button>
+    </ion-buttons>
     <ion-title>Opdrachten</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
+  <ion-button ionFocus color="warning" [routerLink]="['/opdrachten','button']" class=""> Button</ion-button>
+  <ion-button color="secondary" [routerLink]="['/opdrachten','card']" class="">Cards</ion-button>
+  <ion-button color="dark" [routerLink]="['/opdrachten','chip']" class="">Chip</ion-button>
+  <ion-button color="primary" [routerLink]="['/opdrachten','fab']" class="">FAB</ion-button>
+  <ion-button color="danger" [routerLink]="['/opdrachten','item']" class=""> Item</ion-button>
 
-  <h1 class="ion-text-center">Buttons</h1>
-  <ion-button color="warning"> button</ion-button>
-  <ion-button expand="block" color="secondary"> Block</ion-button>
-  <ion-button fill="outline" (click)="alertButton()">
-    <ion-icon name="alarm-outline" slot="end"></ion-icon>
+  <ion-button color="warning" [routerLink]="['/opdrachten','item-sliding']" class=""> Item Slide</ion-button>
+  <ion-button color="dark" [routerLink]="['/opdrachten','media']" class=""> Media Component</ion-button>
+  <ion-button color="primary" [routerLink]="['/opdrachten','spinner']" class="">Spinner</ion-button>
 
-    outline
-  </ion-button>
-  <ion-button fill="clear" id="clear" (click)="clear()"> Clear</ion-button>
-  <hr>
-  <h1 class="ion-text-center ion-padding-top">Cards</h1>
-  <ion-card>
-    <img src="../../assets/imges/img1.jpeg">
-    <ion-card-header>
-      <ion-card-subtitle>Nederland</ion-card-subtitle>
-      <ion-card-title>Mooie Vlinder</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur officia maxime consectetur reiciendis odit modi,
-      soluta, beatae itaque, reprehenderit numquam delectus quod aperiam in. Dolorem nam veniam doloribus error
-      veritatis.
-    </ion-card-content>
-  </ion-card>
-  <h1 class="ion-text-center ion-padding-top">Chip</h1>
-  <ion-chip>
-    <ion-label>Nedrland</ion-label>
-  </ion-chip>
-  <ion-chip color="primary" outline>
-    <ion-label>Vlinder</ion-label>
-  </ion-chip>
-  <ion-chip color="secondary">
-    <ion-icon name="person"></ion-icon>
-    <ion-label>Vlinder</ion-label>
-    <ion-icon name="close"></ion-icon>
-  </ion-chip>
-  <h1 class="ion-text-center ion-padding-top">FAB</h1>
-  <ion-fab vertical="center" horizontal="center" class="padding" slot="fixed">
-    <ion-fab-button>
-      <ion-icon name="share-social-outline"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-list side="top">
-      <ion-fab-button (click)="share('facebook')" color="primary">
-        <ion-icon name="logo-facebook"></ion-icon>
-      </ion-fab-button>
-    </ion-fab-list>
-    <ion-fab-list side="bottom">
-      <ion-fab-button (click)="share('linkedin')" color="secondary">
-        <ion-icon name="logo-linkedin"></ion-icon>
-      </ion-fab-button>
-    </ion-fab-list>
-    <ion-fab-list side="end">
-      <ion-fab-button (click)="share('twitter')" color="secondary">
-        <ion-icon name="logo-twitter"></ion-icon>
-      </ion-fab-button>
-    </ion-fab-list>
-    <ion-fab-list side="start">
-      <ion-fab-button (click)="share('youtube')" color="danger">
-        <ion-icon name="logo-youtube"></ion-icon>
-      </ion-fab-button>
-    </ion-fab-list>
-  </ion-fab>
-  <ion-fab vertical="bottom" horizontal="start" class="padding" slot="fixed" color="secondary">
-    <ion-fab-button>
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+  <ion-badge>99</ion-badge>
+
 </ion-content>

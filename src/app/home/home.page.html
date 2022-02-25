@@ -1,11 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding" [fullscreen]="true">
+
+
   <ion-button color="warning" [routerLink]="['/opdrachten']" class=""> My OPdrachten</ion-button>
+  <ion-button color="dark" [routerLink]="['/users']" class=""> Users</ion-button>
+  <ion-datetime [showClearButton]="true" hour-cycle="h12" locale="en-GB"></ion-datetime>
+  <ion-list>
+    <ion-item *ngFor="let entry of form">
+      <ion-label>{{entry.val}}</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="entry.isChecked" [indeterminate]="entry.isChecked===false ?true:false">
+      </ion-checkbox>
+    </ion-item>
+  </ion-list>
 </ion-content>

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/opdrachten"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Spinner</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button color="primary" (click)="getDataAfterSpinner()" *ngIf="display">Get
+    Data</ion-button>
+  <div class="spinner" *ngIf="loading">
+    <ion-spinner color="primary" name="lines"></ion-spinner>
+  </div>
+  <ion-list *ngIf="!display">
+    <ion-item *ngFor="let item of items">
+      {{item.name}}
+      <ion-note slot="end">{{item.country}}</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>

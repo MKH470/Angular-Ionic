@@ -29,7 +29,9 @@ export class ReorderPage implements OnInit {
     // } else {
     //   this.iconName = 'arrow-down';
     // }
+
     this.users = $ev.detail.complete(this.users);
+    console.log(this.users[0]);
   }
   editListOrder() {
     this.isDisabled = !this.isDisabled;

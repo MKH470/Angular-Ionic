@@ -13,7 +13,7 @@
     <ion-spinner color="primary"></ion-spinner>
   </div>
 
-  <div *ngIf="display">
+  <div *ngIf="display" class="{{ loading ?'card' : ''}}">
     <ion-card *ngFor="let user of users">
       <ion-card-header>
         <ion-card-title>{{user.username}}</ion-card-title>

@@ -1,3 +1,79 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId="main-menu" contentId="main">
+    <ion-header [translucent]="true">
+      <ion-toolbar>
+
+        <ion-title>
+          Welcom!
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/opdrachten','button']">
+            <ion-label>Buttons</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/opdrachten','card']">
+            <ion-label>Card</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/opdrachten','chip']">
+            <ion-label>Chip</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/opdrachten','fab']">
+            <ion-label>FAB</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/opdrachten','item']">
+            <ion-label>Item</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/opdrachten','item-sliding']">
+            <ion-label>Item Slide</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/opdrachten','media']">
+            <ion-label>Media Component</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/opdrachten','spinner']">
+            <ion-label>Spinner</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/opdrachten','skeleton']">
+            <ion-label>Skeleton</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/opdrachten','progress-bar']">
+            <ion-label>Progress Bar</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/opdrachten','refresher']">
+            <ion-label>Refresher</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/opdrachten','reorder']">
+            <ion-label>Reorder</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

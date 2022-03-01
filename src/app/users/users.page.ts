@@ -10,6 +10,7 @@ import { UsersService } from '../users.service';
 export class UsersPage implements OnInit {
   loading: boolean;
   display: boolean;
+  scroll: boolean;
   public users: User[] = [];
   constructor(private usersService: UsersService) {}
 
@@ -23,7 +24,7 @@ export class UsersPage implements OnInit {
     setTimeout(() => {
       this.loading = false;
     }, 2000);
-    this.display = !this.display;
+    this.display = true;
     return this.users;
   }
 }

@@ -1,0 +1,23 @@
+.rij ion-item ion-label::after {
+  content: "⇵ ";
+  position: absolute;
+  right: 5px;
+  color: hsl(17, 100%, 50%) !important;
+  font-size: 1.5em;
+}
+
+.rij:last-child ion-item ion-label::after {
+  content: "↑ ";
+  position: absolute;
+  right: 5px;
+  color: blue !important;
+  font-size: 1.5em;
+}
+
+.rij:first-child ion-item ion-label::after {
+  content: "↓ ";
+  position: absolute;
+  right: 5px;
+  color: blue !important;
+  font-size: 1.5em;
+}

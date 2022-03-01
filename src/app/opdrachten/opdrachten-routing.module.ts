@@ -39,6 +39,22 @@ const routes: Routes = [
   {
     path: 'spinner',
     loadChildren: () => import('./spinner/spinner.module').then( m => m.SpinnerPageModule)
+  },
+  {
+    path: 'skeleton',
+    loadChildren: () => import('./skeleton/skeleton.module').then( m => m.SkeletonPageModule)
+  },
+  {
+    path: 'progress-bar',
+    loadChildren: () => import('./progress-bar/progress-bar.module').then( m => m.ProgressBarPageModule)
+  },
+  {
+    path: 'refresher',
+    loadChildren: () => import('./refresher/refresher.module').then( m => m.RefresherPageModule)
+  },
+  {
+    path: 'reorder',
+    loadChildren: () => import('./reorder/reorder.module').then( m => m.ReorderPageModule)
   }
 ];
 

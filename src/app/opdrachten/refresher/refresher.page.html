@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/opdrachten"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Refresher</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)=" doRevreshing($event)">
+      <ion-refresher-content pullingIcon="chevron-down-circle-outline" pullingText="Pull to refresh"
+        refreshingSpinner="circles" refreshingText="Refreshing...">
+      </ion-refresher-content>
+    </ion-refresher>
+    <h1 *ngIf=" !usresAfterRefreshing" class="animate__animated animate__fast animate__fadeIn">Pull to get the data</h1>
+    <ion-list *ngIf="usresAfterRefreshing && usresAfterRefreshing.length > 0"
+      class="animate__animated animate__fast animate__fadeIn">
+      <ion-item *ngFor="let user of usresAfterRefreshing">
+        <ion-label>{{user.name}}</ion-label>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>

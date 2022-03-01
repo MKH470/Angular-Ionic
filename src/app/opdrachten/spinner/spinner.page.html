@@ -13,7 +13,7 @@
   <div class="spinner" *ngIf="loading">
     <ion-spinner color="primary" name="lines"></ion-spinner>
   </div>
-  <ion-list *ngIf="!display">
+  <ion-list *ngIf="!display" class="{{loading ? 'card' : ''}}">
     <ion-item *ngFor="let item of items">
       {{item.name}}
       <ion-note slot="end">{{item.country}}</ion-note>

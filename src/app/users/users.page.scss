@@ -1,6 +1,19 @@
+.no-scroll .scroll-content {
+  overflow: hidden;
+}
 .spinner2 {
   height: 100%;
   display: flex;
+  bottom: 0;
+  left: 0;
   justify-content: center;
   align-items: center;
+  // overflow: hidden;
+  // z-index: 2000;
+  // bottom: 0;
+  // left: 0;
+  // top: 0;
+}
+.card {
+  display: none;
 }

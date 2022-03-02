@@ -55,6 +55,22 @@ const routes: Routes = [
   {
     path: 'reorder',
     loadChildren: () => import('./reorder/reorder.module').then( m => m.ReorderPageModule)
+  },
+  {
+    path: 'loading-controller',
+    loadChildren: () => import('./loading-controller/loading-controller.module').then( m => m.LoadingControllerPageModule)
+  },
+  {
+    path: 'toast',
+    loadChildren: () => import('./toast/toast.module').then( m => m.ToastPageModule)
+  },
+  {
+    path: 'action-sheet',
+    loadChildren: () => import('./action-sheet/action-sheet.module').then( m => m.ActionSheetPageModule)
+  },
+  {
+    path: 'alert',
+    loadChildren: () => import('./alert/alert.module').then( m => m.AlertPageModule)
   }
 ];
 

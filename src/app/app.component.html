@@ -8,7 +8,7 @@
         </ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content>
+    <ion-content class="ion-padding">
       <ion-list>
         <ion-menu-toggle>
           <ion-item [routerLink]="['/opdrachten','button']">
@@ -70,7 +70,26 @@
             <ion-label>Reorder</ion-label>
           </ion-item>
         </ion-menu-toggle>
-
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/opdrachten','loading-controller']">
+            <ion-label>Loading Contoller</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/opdrachten','toast']">
+            <ion-label>Toast</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/opdrachten','action-sheet']">
+            <ion-label>Toast</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/opdrachten','alert']">
+            <ion-label>Alert</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
       </ion-list>
     </ion-content>
   </ion-menu>

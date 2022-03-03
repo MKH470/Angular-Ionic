@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/form"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Inputs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Inputs Position</h2>
+  <ion-item>
+    <ion-label position="fixed">Fixed Input</ion-label>
+    <ion-input type="email"> </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Floating Input</ion-label>
+    <ion-input type="email"> </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Stacked Input</ion-label>
+    <ion-input type="email"> </ion-input>
+  </ion-item>
+  <h2>Input Example</h2>
+  <p>placeholder/type/clearInput.....</p>
+  <ion-item>
+    <ion-icon name="mail" slot="start"></ion-icon>
+    <ion-label position="stacked">Name</ion-label>
+    <ion-input type="text" placeholder="clearInput" clearInput> </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Name</ion-label>
+    <ion-input type="text" placeholder="clearOnEdit" clearOnEdit> </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Name</ion-label>
+    <ion-input type="text" placeholder="autofocus" autofocus> </ion-input>
+  </ion-item>
+</ion-content>

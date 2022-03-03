@@ -11,6 +11,18 @@
 
 <ion-content class="ion-padding" [fullscreen]="true">
 
+  <!-- <form [formGroup]="editorForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="editor">
+        <h3>Editor</h3>
+      </label>
+      <quill-editor formControlName="editor"></quill-editor>
+    </div>
+    <ion-button>submit</ion-button>
+  </form> -->
+  <ckeditor [(ngModel)]="ckeditorContent">
+
+  </ckeditor>
 
   <ion-button color="warning" [routerLink]="['/opdrachten']" class=""> My OPdrachten</ion-button>
   <ion-button color="dark" [routerLink]="['/users']" class=""> Users</ion-button>

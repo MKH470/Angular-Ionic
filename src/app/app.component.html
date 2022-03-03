@@ -11,6 +11,14 @@
     <ion-content class="ion-padding">
       <ion-list>
         <ion-menu-toggle>
+          <ion-item [routerLink]="['/users']">
+            <ion-label>All Users</ion-label>
+            <ion-text slot="end" color="success">
+              (Observable)
+            </ion-text>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
           <ion-item [routerLink]="['/opdrachten','button']">
             <ion-label>Buttons</ion-label>
           </ion-item>
@@ -63,31 +71,58 @@
         <ion-menu-toggle>
           <ion-item [routerLink]="['/opdrachten','refresher']">
             <ion-label>Refresher</ion-label>
+            <ion-text slot="end" color="danger">
+              (Event)
+            </ion-text>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle>
           <ion-item [routerLink]="['/opdrachten','reorder']">
-            <ion-label>Reorder</ion-label>
+            <ion-label>Reorder </ion-label>
+            <ion-text slot="end" color="danger">
+              (Event)
+            </ion-text>
+
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle>
           <ion-item [routerLink]="['/opdrachten','loading-controller']">
             <ion-label>Loading Contoller</ion-label>
+            <ion-text slot="end" color="primary">
+              (Promises)
+            </ion-text>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle>
           <ion-item [routerLink]="['/opdrachten','toast']">
             <ion-label>Toast</ion-label>
+            <ion-text slot="end" color="primary">
+              (Promises)
+            </ion-text>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle>
           <ion-item [routerLink]="['/opdrachten','action-sheet']">
-            <ion-label>Toast</ion-label>
+            <ion-label>Action sheet</ion-label>
+            <ion-text slot="end" color="primary">
+              (Promises)
+            </ion-text>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle>
           <ion-item [routerLink]="['/opdrachten','alert']">
             <ion-label>Alert</ion-label>
+            <ion-text slot="end" color="primary">
+              (Promises)
+            </ion-text>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/opdrachten','form']">
+            <ion-label>Form</ion-label>
+            <ion-text slot="end" color="success">
+              (tow data binding)
+            </ion-text>
           </ion-item>
         </ion-menu-toggle>
       </ion-list>

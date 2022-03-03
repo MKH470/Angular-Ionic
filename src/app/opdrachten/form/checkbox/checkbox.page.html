@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/form"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Checkbox</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <!-- ------------- checkbox ------------------------------------------------------------------- -->
+    <!-- <ion-checkbox slot="start" (ionChange)="checkValueBeforeSave($event)" mode="ios" color="danger"
+      [(ngModel)]="isChecked"></ion-checkbox> -->
+
+
+    <!-- -------------Toggle ------------------------------------------------------------------- -->
+    <ion-toggle slot="start" (ionChange)="checkValueBeforeSave($event)" mode="ios" color="danger"
+      [(ngModel)]="isChecked">
+    </ion-toggle>
+    <ion-label position="fixed">select item</ion-label>
+  </ion-item>
+  <ion-button class="ion-margin-top" expand="block" color="danger" (click)="checkValueAfterSave()">Seve</ion-button>
+</ion-content>

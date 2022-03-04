@@ -19,6 +19,10 @@ const routes: Routes = [
   {
     path: 'checkbox',
     loadChildren: () => import('./checkbox/checkbox.module').then( m => m.CheckboxPageModule)
+  },
+  {
+    path: 'select',
+    loadChildren: () => import('./select/select.module').then( m => m.SelectPageModule)
   }
 ];
 

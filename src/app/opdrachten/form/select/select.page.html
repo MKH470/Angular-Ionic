@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/opdrachten/form"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Select</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-label>Select Your language</ion-label>
+    <ion-select [(ngModel)]="language" okText="Ja" cancelText="Nee" placeholder="languge">
+      <ion-select-option value="english">English</ion-select-option>
+      <ion-select-option value="arabic">Arabic</ion-select-option>
+      <ion-select-option value="nederlands">Nederlands</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-button class="ion-margin-top ion-margin-bottom " expand="block" color="danger" (click)="
+    getLangugeFromSelect()">Seve</ion-button>
+  <!-- -------------Get select option from Event listener------------- -->
+  <h3 class="ion-margin-top">Get select option from Event listener</h3>
+  <ion-item>
+    <ion-label>Select Your experiences</ion-label>
+    <ion-select (ionChange)="selectOptionDataUsingEvent($event)" interface="action-sheet" placeholder="experiences">
+      <ion-select-option value="javascript">Javascript</ion-select-option>
+      <ion-select-option value="java">Python</ion-select-option>
+      <ion-select-option value="php">Php</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <h3 class="ion-margin-top">For Loop met select</h3>
+  <ion-item>
+    <ion-label>Select user</ion-label>
+    <ion-select (ionChange)="selectUser($event)" interface="action-sheet" placeholder="users">
+      <ion-select-option *ngFor="let user of users ; let i =index" [value]="i">{{user.name}} </ion-select-option>
+    </ion-select>
+  </ion-item>
+  <h3 class="ion-margin-top">Selected Adrees</h3>
+  <ion-item>
+    <ion-label>Select Contries</ion-label>
+    <ion-select (ionChange)="selectContries($event)" interface="action-sheet" placeholder="contries">
+      <ion-select-option *ngFor="let country  of countries ; let i =index" [value]="i">{{country.name}}
+      </ion-select-option>
+
+    </ion-select>
+  </ion-item>
+  <ion-item *ngIf="getCities">
+    <ion-label>Select City</ion-label>
+    <ion-select [(ngModel)]="selectCity" interface="action-sheet" placeholder="cieties">
+      <ion-select-option *ngFor="let city  of getCities ; let i =index" [value]="city">{{city}}
+      </ion-select-option>
+
+    </ion-select>
+  </ion-item>
+  <ion-button *ngIf="selectCity" class="ion-margin-top" expand="block" color="primary" (click)=" saveAddres()">Seve
+  </ion-button>
+
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/opdrachten/form"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Date-Time</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Chose Date</ion-label>
+    <ion-datetime mode="ios" (ionChange)="getDateTime($event)"></ion-datetime>
+  </ion-item>
+  <!-- <ion-item>
+    <ion-label>Chose Time</ion-label>
+    <ion-datetime displayFormat="hh:mm:ss"></ion-datetime>
+  </ion-item> -->
+</ion-content>

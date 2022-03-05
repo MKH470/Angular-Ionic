@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/opdrachten"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="warming">Segment</ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="warming">
+    <ion-segment [(ngModel)]="selectSegment" (ionChange))="selecteYourSegment($event)" value="chats">
+      <ion-segment-button value="chats">
+        <ion-label>Chats</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="status">
+        <ion-label>Status</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="calls">
+        <ion-label>Calls</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="segment-content">
+    <div class="chats" *ngIf="selectSegment === 'chats'">
+      chats here...
+
+    </div>
+    <div class="status" *ngIf="selectSegment === 'status'">
+      status here...
+    </div>
+    <div class="calls" *ngIf="selectSegment === 'calls'">
+      calls here...
+    </div>
+  </div>
+
+
+
+</ion-content>

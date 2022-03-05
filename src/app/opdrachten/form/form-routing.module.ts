@@ -27,6 +27,10 @@ const routes: Routes = [
   {
     path: 'radio',
     loadChildren: () => import('./radio/radio.module').then( m => m.RadioPageModule)
+  },
+  {
+    path: 'date-time',
+    loadChildren: () => import('./date-time/date-time.module').then( m => m.DateTimePageModule)
   }
 ];
 

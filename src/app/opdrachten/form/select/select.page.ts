@@ -25,9 +25,9 @@ export class SelectPage implements OnInit {
   language: string;
   experiences: string;
   users: any[];
-  selectedCountry;
-  selectCity;
-  getCities: string[];
+  selectedCountryFrom;
+  selectCityFrom;
+  getCitiesFrom: string[];
 
   constructor(private usersService: UsersService) {}
 
@@ -47,17 +47,17 @@ export class SelectPage implements OnInit {
     const address = user.address.street;
     console.log(address);
   }
-  selectContries($ev) {
+  selectContriesFrom($ev) {
     const country = this.countries[$ev.detail.value];
-    this.getCities = country.cities;
-    this.selectedCountry = country.name;
+    this.getCitiesFrom = country.cities;
+    this.selectedCountryFrom = country.name;
   }
   // selectCity($ev) {
   //   const city = this.getCities[$ev.detail.value];
   //   console.log(city);
   // }
   saveAddres() {
-    console.log('The selected Country is: ', this.selectedCountry);
-    console.log('The selected  City is', this.selectCity);
+    console.log('The selected Country is: ', this.selectedCountryFrom);
+    console.log('The selected  City is', this.selectCityFrom);
   }
 }

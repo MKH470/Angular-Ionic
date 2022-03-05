@@ -36,24 +36,38 @@
       <ion-select-option *ngFor="let user of users ; let i =index" [value]="i">{{user.name}} </ion-select-option>
     </ion-select>
   </ion-item>
-  <h3 class="ion-margin-top">Selected Adrees</h3>
-  <ion-item>
-    <ion-label>Select Contries</ion-label>
-    <ion-select (ionChange)="selectContries($event)" interface="action-sheet" placeholder="contries">
-      <ion-select-option *ngFor="let country  of countries ; let i =index" [value]="i">{{country.name}}
-      </ion-select-option>
+  <div class="city">
+    <h3 class="ion-margin-top ">Plan your travel</h3>
+    <ion-item>
+      <ion-label>Select From</ion-label>
+      <ion-select (ionChange)="selectContriesFrom($event)" interface="action-sheet" placeholder="contries">
+        <ion-select-option *ngFor="let country  of countries ; let i =index" [value]="i">{{country.name}}
+        </ion-select-option>
 
-    </ion-select>
-  </ion-item>
-  <ion-item *ngIf="getCities">
-    <ion-label>Select City</ion-label>
-    <ion-select [(ngModel)]="selectCity" interface="action-sheet" placeholder="cieties">
-      <ion-select-option *ngFor="let city  of getCities ; let i =index" [value]="city">{{city}}
-      </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item *ngIf="getCitiesFrom">
+      <ion-label>Select City</ion-label>
+      <ion-select [(ngModel)]="selectCityFrom" interface="action-sheet" placeholder="cieties">
+        <ion-select-option *ngFor="let city  of getCitiesFrom ; let i =index" [value]="city">{{city}}
+        </ion-select-option>
 
-    </ion-select>
-  </ion-item>
-  <ion-button *ngIf="selectCity" class="ion-margin-top" expand="block" color="primary" (click)=" saveAddres()">Seve
-  </ion-button>
+      </ion-select>
+    </ion-item>
+    <!----------------------
+    <ion-item>
+
+      <ion-select (ionChange)="selectContriesTo($event)" interface="action-sheet" placeholder="contries">
+        <ion-select-option value="i">hhhhhhh
+        </ion-select-option>
+
+      </ion-select>
+    </ion-item>
+-------------------->
+    <ion-button *ngIf="selectCityFrom" class="ion-margin-top" expand="block" color="success" (click)=" saveAddres()">
+      Seve
+    </ion-button>
+  </div>
+
 
 </ion-content>

@@ -5,12 +5,12 @@ export interface User {
   username: any;
   email: any;
   address: any[];
-  // street: any;
-  // suite: any;
-  // city: any;
-  // zipcode: any;
-  // lat: any;
-  // lng: any;
+  street: any;
+  suite: any;
+  city: any;
+  zipcode: any;
+  lat: any;
+  lng: any;
   phone: any;
   website: any;
 }

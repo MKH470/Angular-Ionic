@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/opdrachten/form"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Radio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Genders</ion-label>
+    </ion-list-header>
+    <ion-radio-group [(ngModel)]="gender" (ionChange)="saveGederUsingEvent($event)">
+      <ion-item>
+        <ion-label>Mele</ion-label>
+        <ion-radio slot="start" value="male">
+
+        </ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Femail</ion-label>
+        <ion-radio slot="start" value="femail">
+
+        </ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Other</ion-label>
+        <ion-radio slot="start" value="other">
+
+        </ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+    <ion-button expand="block" color="primary" (click)="saveGender()">Save</ion-button>
+  </ion-list>
+
+
+
+</ion-content>

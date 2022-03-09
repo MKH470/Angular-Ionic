@@ -1,0 +1,17 @@
+<ion-content>
+  <ion-list>
+    <ion-list-header *ngIf="username">USER: {{username}}</ion-list-header>
+    <ion-item (click)="itmeControll('delete')">
+      <ion-icon name="trash-outline" slot="start"></ion-icon>
+      <ion-label>delete</ion-label>
+    </ion-item>
+    <ion-item (click)="itmeControll('edit')">
+      <ion-icon name="create-outline" slot="start"></ion-icon>
+      <ion-label>edit</ion-label>
+    </ion-item>
+    <ion-item (click)="itmeControll('changePass')">
+      <ion-icon name="warning-outline" slot="start"></ion-icon>
+      <ion-label>change password</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

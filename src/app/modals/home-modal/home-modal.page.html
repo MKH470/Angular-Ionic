@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>HomeModal</ion-title>
+    <ion-buttons slot="end">
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="loading" class="spinner">
+    <ion-spinner></ion-spinner>
+  </div>
+  <div *ngIf="!loading">
+    <ion-text *ngIf="text">
+      {{text}}
+    </ion-text>
+    <ion-item>
+      <ion-label>Fullname: </ion-label>
+      <ion-input type="text" [(ngModel)]="textModal" placeholder="your name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Telephone: </ion-label>
+      <ion-input type="number" [(ngModel)]="foonModal" placeholder="your telephone"></ion-input>
+    </ion-item>
+    <ion-button class="ion-margin-top" expand="block" color="primary" (click)="closeHomeModal()"> Send to home page
+    </ion-button>
+  </div>
+
+</ion-content>

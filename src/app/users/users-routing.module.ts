@@ -6,8 +6,15 @@ import { UsersPage } from './users.page';
 const routes: Routes = [
   {
     path: '',
-    component: UsersPage
-  }
+    component: UsersPage,
+  },
+  {
+    path: 'user-profiel',
+    loadChildren: () =>
+      import('./user-profiel/user-profiel.module').then(
+        (m) => m.UserProfielPageModule
+      ),
+  },
 ];
 
 @NgModule({

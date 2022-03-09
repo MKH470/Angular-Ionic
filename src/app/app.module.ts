@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { UsersService } from './users.service';
+import { PostsService } from './posts.service';
+import { ModalPage } from './opdrachten/modal/modal.page';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,9 +22,14 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule,
     CKEditorModule,
     FormsModule,
+
     // QuillModule,
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    UsersService,
+    PostsService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

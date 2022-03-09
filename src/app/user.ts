@@ -1,6 +1,8 @@
 export interface User {
   // eslint-disable-next-line @typescript-eslint/ban-types
-  name: String;
+  id: any;
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  name: string;
   // eslint-disable-next-line @typescript-eslint/ban-types
   username: any;
   email: any;

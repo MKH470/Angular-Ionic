@@ -79,6 +79,14 @@ const routes: Routes = [
   {
     path: 'segment',
     loadChildren: () => import('./segment/segment.module').then( m => m.SegmentPageModule)
+  },
+  {
+    path: 'modal',
+    loadChildren: () => import('./modal/modal.module').then( m => m.ModalPageModule)
+  },
+  {
+    path: 'option',
+    loadChildren: () => import('./option/option.module').then( m => m.OptionPageModule)
   }
 ];
 

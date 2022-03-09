@@ -6,6 +6,11 @@
     <ion-title>
       Home
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="outline" color="primary" (click)="showHomeModal()"> Modal</ion-button>
+      <ion-button fill="outline" color="danger" [routerLink]="['/login']" class=""> Login</ion-button>
+      <ion-button fill="outline" color="dark" [routerLink]="['/tabs']" class=""> Tabs</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -26,6 +31,8 @@
 
   <ion-button color="warning" [routerLink]="['/opdrachten']" class=""> My OPdrachten</ion-button>
   <ion-button color="dark" [routerLink]="['/users']" class=""> Users</ion-button>
+
+
   <ion-datetime [showClearButton]="true" hour-cycle="h12" locale="en-GB"></ion-datetime>
   <ion-list>
     <ion-item *ngFor="let entry of form">

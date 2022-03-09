@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="spinnerLogin" *ngIf="loadingData">
+    <ion-spinner color="primary" name="lines"></ion-spinner>
+  </div>
+  <ion-list *ngIf="!loadingData">
+    <ion-list-header>
+      <ion-label>login</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>here the input area</ion-label>
+      <ion-button class="ion-margin-top" expand="block" color="primary" (click)="login()">Login</ion-button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -7,6 +7,7 @@ import { CKEditorModule } from 'ng2-ckeditor';
 import { FormsModule } from '@angular/forms';
 import { HomePageRoutingModule } from './home-routing.module';
 import { QuillModule } from 'ngx-quill';
+import { HomeModalPageModule } from '../modals/home-modal/home-modal.module';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { QuillModule } from 'ngx-quill';
     HomePageRoutingModule,
     // ReactiveFormsModule,
     QuillModule,
+    HomeModalPageModule,
   ],
   declarations: [HomePage],
 })

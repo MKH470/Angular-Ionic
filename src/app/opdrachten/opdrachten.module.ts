@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { OpdrachtenPageRoutingModule } from './opdrachten-routing.module';
 
 import { OpdrachtenPage } from './opdrachten.page';
+import { ModalPageModule } from './modal/modal.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    OpdrachtenPageRoutingModule
+    OpdrachtenPageRoutingModule,
+    ModalPageModule,
   ],
-  declarations: [OpdrachtenPage]
+  declarations: [OpdrachtenPage],
 })
 export class OpdrachtenPageModule {}

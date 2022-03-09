@@ -7,14 +7,26 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-button color="primary" (click)="getAllUsers()" *ngIf="!display">Get All Users</ion-button>
+<ion-content class="ion-padding">
+  <ion-button expand="block" class="ion-no-margin-top" color="primary" (click)="getAllUsers()" *ngIf="!display">Get All
+    Users</ion-button>
   <div class="spinner2" *ngIf="loading">
     <ion-spinner color="primary"></ion-spinner>
   </div>
 
   <div *ngIf="display" class="{{ loading ?'card' : ''}}">
-    <ion-card *ngFor="let user of users">
+    <ion-list>
+      <ion-list-header>
+        <ion-label>All Users</ion-label>
+      </ion-list-header>
+      <ion-item *ngFor="let user of users">
+        <ion-label (click)="goToProfile(user.id)">{{user.username}}</ion-label>
+        <ion-button slot="end" fill="clear" (click)="showOPtions($event,(user.name))">
+          <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+    <!-- <ion-card >
       <ion-card-header>
         <ion-card-title>{{user.username}}</ion-card-title>
         <ion-card-subtitle>{{user.name}}</ion-card-subtitle>
@@ -27,6 +39,6 @@
         <p><strong>website: </strong>{{user.website}}</p>
 
       </ion-card-content>
-    </ion-card>
+    </ion-card> -->
   </div>
 </ion-content>
